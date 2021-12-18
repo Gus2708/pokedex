@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 
 const Card = ({name, url}) => {
+
+    const [image, setImage] = useState();
     
     useEffect(() => {
         getImage();
+        return () => setImage();
     }, [])
 
-    const [image, setImage] = useState();
 
     const getImage = async () => {
         const response = await fetch(`${url}`);
