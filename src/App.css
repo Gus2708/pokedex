@@ -1,5 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oxygen:wght@400;700&family=Teko:wght@300;400&display=swap');
+
+:root{
+  color1: #0C0029;
+  color2: #1B0041;
+  contraste1: #FFA630;
+  contraste2: #371187;
+  color3: #ECEBF3;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.App{
+  background: #0C0029;
+  font-family: 'Oxygen', sans-serif;
+  color: #ECEBF3;
+}
+
+.header {
+  min-width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.header h1{
+  font-size: 4rem;
+  font-family: 'Teko', sans-serif;
+  font-weight: light;
+  order: 1;
+  text-align: center;
+  width: 100%;
+  header: min-content;
+}
+
+.header h2{
+  color: #d4d3dbc5;
+  order: 2;
+  text-align: center;
+  display: block;
+  font-size: 1.15rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  width: 100%; 
+}
+
+.search{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+}
+
+.search .input{
+  width: 70%;
+  height: 5vh;
+  border-radius: 3vh;
+  padding: 1rem;
+  background: #ecebf3c7;
+  border: none !important;
+}
+
+.search .btn{
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  transform: translatex(-2.2rem);
+  color: #ECEBF3 !important;
+
 }
