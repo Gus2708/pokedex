@@ -46,8 +46,8 @@ function App() {
       </form>
       <div className="pokeContainer">
         {pokemons.map(pokemons => (
-          <Card name={pokemons.name} url={pokemons.url} key={pokemons.name + Date.now()}/>
-        ))};
+          <Card className="pokeCard" name={pokemons.name} url={pokemons.url} key={pokemons.name + Date.now()}/>
+        ))}
       </div>
     </div>
   );
