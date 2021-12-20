@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background: #0C0029;
+}
+
 .App{
   background: #0C0029;
   font-family: 'Oxygen', sans-serif;
@@ -62,19 +66,26 @@
 
 .search .input{
   width: 70%;
-  height: 5vh;
+  height: 6vh;
   border-radius: 3vh;
   padding: 1rem;
   background: #ecebf3c7;
   border: none !important;
+  font-family: 'Oxygen', sans-serif;
+  font-weight: light;
+  font-size: 1rem;
 }
 
 .search .btn{
+  cursor: pointer;
   background: transparent;
   border: none;
   font-size: 2rem;
   transform: translatex(-2.2rem);
-  color: #ECEBF3 !important;
+}
+
+.search .btn svg{
+  fill: #0C0029 !important;
 }
 
 .pokeContainer{
@@ -85,23 +96,56 @@
   margin: 1rem 2rem;
 }
 
-.pokeContainer div{
-  font-style: capitalize;
-  margin: 2rem 1rem;
+.pokeContainer .container{
   display: flex;
+  margin: 2rem 1rem;
+  border-radius: 5px;
   width: 15%;
+  height: max-content;
+  position: relative !important;
+}
+
+.card{
+  cursor: pointer !important;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  z-index: 2;
+  font-style: capitalize;
+  display: flex;
   justify-content: center;
   text-align: center;
   flex-direction: column;
   padding: 1rem;
   font-size: 1.25rem;
   background: rgba(255, 255, 255, .2);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-  border-radius: 5px;
+	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(8px);
+  border-radius: 7px;
   font-size: .75em;
 }
 
 .pokeball{
-  color: #ecebf3c4;
+  fill: #ecebf386;
+  transition: all 0.3s ease;
+}
+
+.pokeballBack{
+  position: absolute;
+  z-index: 0; 
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  fill: #ecebf359;
+  transition: all 0.3s ease;
+}
+
+.pokeContainer .container:hover .pokeball{
+  fill: #ecebf3f3;
+  transition: all 0.3s ease;
+}
+
+.pokeContainer .container:hover .pokeballBack{
+  fill: #ecebf383;
+  transition: all 0.3s ease;
 }
