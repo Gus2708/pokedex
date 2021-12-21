@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Oxygen:wght@400;700&family=Teko:wght@300;400&display=swap');
 
-:root{
-  color1: #0C0029;
-  color2: #1B0041;
-  contraste1: #FFA630;
-  contraste2: #371187;
-  color3: #ECEBF3;
-}
-
 *{
   margin: 0;
   padding: 0;
@@ -41,7 +33,6 @@ body{
   order: 1;
   text-align: center;
   width: 100%;
-  header: min-content;
 }
 
 .header h2{
@@ -123,6 +114,8 @@ body{
 	backdrop-filter: blur(8px);
   border-radius: 7px;
   font-size: .75em;
+  text-transform: capitalize;
+  box-shadow: 4px 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .pokeball{
@@ -148,4 +141,16 @@ body{
 .pokeContainer .container:hover .pokeballBack{
   fill: #ecebf383;
   transition: all 0.3s ease;
+}
+
+.card img{
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3));
+  transition: all 0.2s ease;
+}
+
+.pokeContainer .container:hover .card img{
+  -webkit-filter: drop-shadow(5px 3px 2px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(4px 3px 2px rgba(0, 0, 0, 0.4));
+  transition: all 0.1s ease;
 }
